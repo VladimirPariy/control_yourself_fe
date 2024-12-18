@@ -1,12 +1,16 @@
+import {RoutePath} from '@/app/router/constant';
+import {LoginForm} from '@features/auth/login/login-form';
+import {LoginOAuth} from '@features/auth/login/login-oauth';
 import {AuthLayout} from '@lib/layouts/auth-layout';
-import {Button} from '@lib/UI/button';
+import {AuthHeader, AuthLink} from '@lib/UI/auth';
 
 export function LoginPage() {
   return (
     <AuthLayout>
-      <Button height="high" width="full">
-        Login
-      </Button>
+      <AuthHeader text="Sign in" />
+      <LoginOAuth />
+      <LoginForm />
+      <AuthLink label="Don't have an account?" href={RoutePath.SIGNUP} linkText="Sign up" />
     </AuthLayout>
   );
 }

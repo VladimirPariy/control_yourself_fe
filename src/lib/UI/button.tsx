@@ -11,7 +11,7 @@ export function Button(props: ButtonProps) {
   return (
     <button
       className={classNames(
-        'bg-neutral-800 hover:bg-neutral-800/80 text-white rounded-lg transition-all duration-300 min-w-fit px-2 flex justify-center items-center',
+        'bg-zinc-800/70 hover:bg-zinc-800 text-white rounded-lg transition-all duration-300 min-w-fit px-2 flex justify-center items-center font-semibold',
         {low: 'h-5', medium: 'h-8', high: 'h-11'}[height],
         {narrow: 'w-16', medium: 'w-20', wide: 'w-24', full: 'w-full'}[width],
       )}>
