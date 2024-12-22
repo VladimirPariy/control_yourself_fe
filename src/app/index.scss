@@ -5,5 +5,26 @@
 @tailwind utilities;
 
 #root {
-  @apply bg-zinc-900 w-screen h-screen font-poppins text-base;
+  @apply bg-zinc-900 w-screen h-screen font-poppins text-base overflow-hidden;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent rounded-lg my-1 mx-0;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    @apply bg-transparent rounded-lg border border-zinc-800/70 border-solid transition-all duration-300;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-transparent rounded-lg border border-zinc-600 border-solid transition-all duration-300;
+  }
 }
