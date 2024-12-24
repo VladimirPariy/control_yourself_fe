@@ -12,7 +12,6 @@ export function PasswordInput(props: InputProps & {id: string}) {
     if (!document) return;
     const inputParent = document.getElementById(props.id);
     setElem(inputParent);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function onToggleType() {
@@ -35,7 +34,7 @@ export function PasswordInput(props: InputProps & {id: string}) {
               <EyeSlashIcon className="text-zinc-800/70 group-hover:text-zinc-700 hover:scale-110 hover:!text-zinc-400 transition-all duration-300" />
             )}
           </span>,
-          elem,
+          elem
         )}
       </>
     );

@@ -1,8 +1,8 @@
 import {RoutePath} from '@/app/router/constant';
 import {LoginForm} from '@features/auth/login/login-form';
 import {LoginOAuth} from '@features/auth/login/login-oauth';
-import {AuthLayout} from '@lib/layouts/auth-layout';
-import {AuthHeader, AuthLink} from '@lib/UI/auth';
+import {AuthLayout} from '@lib/components/layouts/auth-layout';
+import {AuthHeader, AuthLink} from '@lib/components/UI/auth';
 
 export function LoginPage() {
   return (

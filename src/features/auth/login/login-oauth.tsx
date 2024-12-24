@@ -1,6 +1,6 @@
 import {AppleIcon} from '@assets/icons/apple';
 import {GoogleIcon} from '@assets/icons/google';
-import {Button} from '@lib/UI/button';
+import {Button} from '@lib/components/UI/button';
 
 export function LoginOAuth() {
   return (
