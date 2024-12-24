@@ -8,7 +8,7 @@ export default tseslint.config(
   {ignores: ['dist', 'node_modules', '**.config.{ts,js}']},
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx', '**/*.json', '**/*.cjs', '**/*.mjs'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: globals.browser,
@@ -19,17 +19,17 @@ export default tseslint.config(
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
-      'react-refresh/only-export-components': [
+      'react-refresh/only-export-components': ['warn', {allowConstantExport: true}],
+      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-unused-vars': ['warn', {varsIgnorePattern: '_'}],
+      'react-hooks/exhaustive-deps': 'off',
+      'no-restricted-syntax': [
         'warn',
-        {allowConstantExport: true},
+        {
+          selector: 'ExportDefaultDeclaration',
+          message: 'Prefer named exports',
+        },
       ],
-      "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/no-unused-vars": ["warn", {varsIgnorePattern: "_"}],
-      "react-hooks/exhaustive-deps": "off",
-      "no-restricted-syntax": ["warn", {
-        "selector": "ExportDefaultDeclaration",
-        "message": "Prefer named exports",
-      }]
     },
-  },
+  }
 );
