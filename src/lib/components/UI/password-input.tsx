@@ -9,7 +9,9 @@ export function PasswordInput(props: InputProps & {id: string}) {
   const [type, setType] = useState<HTMLInputTypeAttribute>('password');
 
   useEffect(() => {
-    if (!document) return;
+    if (!document) {
+      return;
+    }
     const inputParent = document.getElementById(props.id);
     setElem(inputParent);
   }, []);
